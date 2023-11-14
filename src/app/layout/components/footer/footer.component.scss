@@ -1,0 +1,26 @@
+footer {
+  padding: 70px 0px 40px;
+  border-top-color: rgba(255, 255, 255, 0.10) !important;
+  h3 {
+    line-height: 1.6;
+  }
+  svg {
+    cursor: pointer;
+    &:first-of-type {
+      margin-inline-end: 16px;
+    }
+    &:last-of-type {
+      margin-inline-start: 16px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .row > {
+      div:first-of-type {
+        text-align: justify !important;
+      }
+      div > div {
+        text-align: end !important;
+      }
+    }
+  }
+}

@@ -18,5 +18,10 @@
     "popular-week": "Popular of the week",
     "movies": "Movies",
     "series": "Series"
+  },
+  "footer": {
+    "ourAchievment": "Our platform is trusted by millions & features best updated movies and series all around the world.",
+    "privacyPolicy": "Privacy policy",
+    "termService": "Term of service"
   }
 }

@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from "@ngx-translate/core";
-import { NgOptimizedImage } from '@angular/common'
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, NgOptimizedImage, TranslateModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss'
 })
-export class HeaderComponent {
+export class FooterComponent {
   constructor(public translate: TranslateService) {
     this.currentLanguage = localStorage.getItem("currentLanguage") || "ar";
     this.translate.use(this.currentLanguage)
@@ -20,13 +19,11 @@ export class HeaderComponent {
   }
   isRtl: boolean = false;
   currentLanguage: string;
-  isShowNav: boolean = false;
-  toggleNavBar() {
-    if(window.innerWidth < 991)
-      this.isShowNav = !this.isShowNav;
-  }
   changeCurrentLanguage(language: string){
     this.translate.use(language)
     localStorage.setItem("currentLanguage", language)
+  }
+  getYear(): number {
+    return new Date().getFullYear()
   }
 }

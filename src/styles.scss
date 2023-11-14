@@ -26,6 +26,7 @@ ul {
 }
 a {
   color: unset;
+  cursor: pointer;
   text-decoration: none;
 }
 // Custom CSS Framework
@@ -51,6 +52,10 @@ a {
   &-column {
     @extend .fx;
     flex-direction: column;
+  }
+  &-wrap {
+    @extend .fx;
+    flex-wrap: wrap;
   }
 }
 // Global Style
