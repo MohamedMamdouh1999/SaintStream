@@ -4,8 +4,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
   { path: '', component: LayoutComponent, children: [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', loadChildren: () => import('./../modules/home/home.module').then(m => m.HomeModule) }
+    { path: 'home', loadComponent: () => import('./../pages/home/home.component').then(c => c.HomeComponent) },
+    { path: '', redirectTo: 'home', pathMatch: 'full' }
   ]}
 ];
 

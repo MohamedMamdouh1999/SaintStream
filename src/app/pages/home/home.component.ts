@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MediaInsetInfoComponent } from '../../shared/components/media-inset-info/media-inset-info.component';
-import { MediaService } from '../../shared/services/media.service';
-import { IMedia } from '../../shared/interfaces/imedia';
+import { MediaService } from '../../modules/shared/services/media.service';
+import { IMedia } from '../../modules/shared/interfaces/imedia';
+import { MediaInsetInfoComponent } from '../../modules/shared/components/media-inset-info/media-inset-info.component';
 
 @Component({
   selector: 'app-home',
