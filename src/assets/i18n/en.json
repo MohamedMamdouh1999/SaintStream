@@ -1,0 +1,22 @@
+{
+  "header": {
+    "links": {
+      "home": "Home",
+      "discover": "Discover",
+      "movie-release": "Movie Release",
+      "forum": "Forum",
+      "about": "About"
+    },
+    "auth": {
+      "log-out": "Log Out",
+      "sign-up": "Sign Up",
+      "log-in": "Log In"
+    }
+  },
+  "home": {
+    "just-release": "Just Release",
+    "popular-week": "Popular of the week",
+    "movies": "Movies",
+    "series": "Series"
+  }
+}

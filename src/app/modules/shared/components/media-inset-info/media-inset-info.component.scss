@@ -1,0 +1,20 @@
+div {
+  background: linear-gradient(0deg, rgba(13,12,15,1) 0%, rgba(0,0,0,0.5) 85%, transparent 95%);
+  padding-inline: {
+    start: 16px;
+    end: 8px
+  }
+  span {
+    margin-inline-start: 8px;
+  }
+}
+:host ::ng-deep {
+  .p-ripple {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--ripple-bgc);
+    &.p-disabled {
+      opacity: 0;
+    }
+  }
+}

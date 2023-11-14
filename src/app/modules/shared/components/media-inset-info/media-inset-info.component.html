@@ -1,0 +1,15 @@
+<article class="mb-4">
+  <h4 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="title"></h4>
+  <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="4.4" [numScroll]="2" [responsiveOptions]="responsiveOptions">
+    <ng-template let-media pTemplate="media">
+      <a class="d-inline-block position-relative rounded-3 overflow-hidden mx-2">
+        <img class="w-100" [src]="'https://image.tmdb.org/t/p/w500' + media.poster_path" [alt]="media.title"/>
+        <div class="position-absolute bottom-0 start-0 end-0 py-2">
+          <p class="fw-bold mb-1">{{media.title || media.name}}</p>
+          <i class="fa-solid fa-star text-warning"></i>
+          <span>{{media.vote_average | number:'1.1-1'}}</span>
+        </div>
+      </a>
+    </ng-template>
+  </p-carousel>
+</article>

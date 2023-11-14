@@ -1,0 +1,26 @@
+header {
+  z-index: 100;
+  background-color: var(--main-color);
+  button img {
+    margin-inline-end: 10px;
+  }
+  a {
+    &.nav-link {
+      color: rgb(255 255 255 / 50%);
+      &:hover {
+        color: white;
+      }
+      &.activeLink {
+        color: white;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .container > div {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 10px;
+      background-color: var(--ripple-bgc);
+    }
+  }
+}
