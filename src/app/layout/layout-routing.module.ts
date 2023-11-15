@@ -5,6 +5,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 const routes: Routes = [
   { path: '', component: LayoutComponent, children: [
     { path: 'home', loadComponent: () => import('./../pages/home/home.component').then(c => c.HomeComponent) },
+    { path: 'discover', loadComponent: () => import('./../pages/discover/discover.component').then(c => c.DiscoverComponent) },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
   ]}
 ];

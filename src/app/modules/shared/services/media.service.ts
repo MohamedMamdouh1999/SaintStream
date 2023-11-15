@@ -14,7 +14,7 @@ export class MediaService {
   };
   url: string = 'https://api.themoviedb.org/3/';
 
-  getMedia(media: string, type: string):Observable<IMedias> {
-    return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=1`, { headers: this.headers})
+  getMedia(media: string, type: string, page: number = 1):Observable<IMedias> {
+    return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=${page}`, {headers: this.headers})
   }
 }

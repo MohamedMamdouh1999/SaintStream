@@ -1,0 +1,20 @@
+<article class="mb-4">
+  <h4 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" translate="home.popular-week"></h4>
+    <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="3.4" [numScroll]="2" [responsiveOptions]="responsiveOptions">
+      <ng-template let-media pTemplate="media">
+        <a class="mx-md-2 fx-middle justify-content-md-start">
+          <h2 class="mb-0 mx-1">{{medias.indexOf(media) + 1}}</h2>
+          <img class="mx-2 rounded-4" priority height="157" width="120" [ngSrc]="'https://image.tmdb.org/t/p/w200' + media.poster_path || media.backdrop_path" [alt]="media.title || media.name"/>
+          <div class="info-media d-flex flex-column align-items-start justify-content-between">
+            <div class="border border-white rounded-3 px-2 py-1">PG-13</div>
+            <p class="mb-0">{{media.title || media.name}}</p>
+            <div>
+              <i class="fa-solid fa-star text-warning"></i>
+              <span class="mx-1">{{media.vote_average | number:'1.1-1'}}</span>
+              <span class="border-start ps-1">Movie</span>
+            </div>
+          </div>
+        </a>
+      </ng-template>
+    </p-carousel>
+</article>

@@ -1,0 +1,46 @@
+article {
+  h2 {
+    font-size: 50px;
+  }
+  .info-media {
+    height: 157px;
+    max-height: 157px;
+    div {
+      &:first-of-type {
+        font-size: 14px;
+        width: fit-content;
+        color: var(--gray-color);
+        border-color: var(--light-gray-color) !important;
+      }
+      &:last-of-type {
+        span {
+          font-size: 13px;
+        }
+        span:last-of-type {
+          color: var(--gray-color);
+          border-color: var(--gray-color) !important;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    h2 {
+      font-size: 40px;
+    }
+  }
+}
+:host ::ng-deep {
+  .p-ripple {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--ripple-bgc);
+    &.p-disabled {
+      opacity: 0;
+    }
+  }
+}
