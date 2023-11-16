@@ -1,20 +1,19 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CarouselModule } from 'primeng/carousel';
-import { IMedia } from '../../../shared/interfaces/imedia';
-import { ResponsiveOption } from '../../interfaces/responsive-option';
-import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from '@ngx-translate/core';
+import { IMedia } from '../../interfaces/imedia';
+import { IResponsiveOption } from '../../interfaces/iresponsive-option';
 
 @Component({
-  selector: 'app-popular-media',
+  selector: 'app-media-popular',
   standalone: true,
   imports: [CommonModule, CarouselModule, TranslateModule, NgOptimizedImage],
-  templateUrl: './popular-media.component.html',
-  styleUrl: './popular-media.component.scss'
+  templateUrl: './media-popular.component.html',
+  styleUrl: './media-popular.component.scss'
 })
-export class PopularMediaComponent {
-  constructor(private translate: TranslateService) {
+export class MediaPopularComponent {
+  constructor(private translate: TranslateService){
     translate.onLangChange.subscribe({
       next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
     })
@@ -25,6 +24,6 @@ export class PopularMediaComponent {
     ];
   }
   isRtl: boolean = false;
-  responsiveOptions: ResponsiveOption[];
+  responsiveOptions: IResponsiveOption[];
   @Input({required: true}) medias!: IMedia[];
 }

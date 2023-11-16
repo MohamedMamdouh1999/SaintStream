@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PopularMediaComponent } from '../../modules/shared/components/popular-media/popular-media.component';
 import { MediaInsetInfoComponent } from '../../modules/shared/components/media-inset-info/media-inset-info.component';
 import { MediaService } from '../../modules/shared/services/media.service';
 import { IMedia } from '../../modules/shared/interfaces/imedia';
+import { MediaPopularComponent } from '../../modules/shared/components/media-popular/media-popular.component';
 
 @Component({
   selector: 'app-discover',
   standalone: true,
-  imports: [CommonModule, MediaInsetInfoComponent, PopularMediaComponent],
+  imports: [CommonModule, MediaInsetInfoComponent, MediaPopularComponent],
   templateUrl: './discover.component.html',
   styleUrl: './discover.component.scss'
 })

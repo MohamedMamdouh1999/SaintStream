@@ -13,6 +13,25 @@
       "log-in": "Log In"
     }
   },
+  "auth": {
+    "logIn": {
+      "titleDescription": "Login to your account",
+      "forgotPassword": "Forgot Password?",
+      "don'tHaveAccount": "Don't have an account? "
+    },
+    "signUp": {
+      "titleDescription": "Register to enjoy the features",
+      "haveAccount": "Already have an account? "
+    },
+    "forms": {
+      "userName": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "logIn": "Login",
+      "register": "Register"
+    }
+  },
   "home": {
     "just-release": "Just Release",
     "popular-week": "Popular of the week",

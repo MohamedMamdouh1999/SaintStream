@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MediaService } from '../../modules/shared/services/media.service';
 import { IMedia } from '../../modules/shared/interfaces/imedia';
 import { MediaInsetInfoComponent } from '../../modules/shared/components/media-inset-info/media-inset-info.component';
-import { PopularMediaComponent } from '../../modules/shared/components/popular-media/popular-media.component';
+import { MediaPopularComponent } from '../../modules/shared/components/media-popular/media-popular.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MediaInsetInfoComponent, PopularMediaComponent],
+  imports: [CommonModule, MediaInsetInfoComponent, MediaPopularComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

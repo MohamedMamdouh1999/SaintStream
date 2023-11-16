@@ -1,0 +1,8 @@
+section {
+  height: 100vh;
+  min-height: 100vh;
+  > div > div {
+    background-color: var(--form-bgc);
+    border-color: var(--form-border) !important;
+  }
+}

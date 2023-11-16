@@ -7,7 +7,8 @@ const routes: Routes = [
     { path: 'home', loadComponent: () => import('./../pages/home/home.component').then(c => c.HomeComponent) },
     { path: 'discover', loadComponent: () => import('./../pages/discover/discover.component').then(c => c.DiscoverComponent) },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
-  ]}
+  ]},
+  { path: 'auth', loadChildren: () => import('./../modules/auth/auth.module').then(m => m.AuthModule) }
 ];
 
 @NgModule({

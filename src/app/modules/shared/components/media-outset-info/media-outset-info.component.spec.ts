@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopularMediaComponent } from './popular-media.component';
+import { MediaOutsetInfoComponent } from './media-outset-info.component';
 
-describe('PopularMediaComponent', () => {
-  let component: PopularMediaComponent;
-  let fixture: ComponentFixture<PopularMediaComponent>;
+describe('MediaOutsetInfoComponent', () => {
+  let component: MediaOutsetInfoComponent;
+  let fixture: ComponentFixture<MediaOutsetInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PopularMediaComponent]
+      imports: [MediaOutsetInfoComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PopularMediaComponent);
+    fixture = TestBed.createComponent(MediaOutsetInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

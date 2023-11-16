@@ -13,6 +13,25 @@
       "log-in": "تسجيل الدخول"
     }
   },
+  "auth": {
+    "logIn": {
+      "titleDescription": "سجل دخول لحسابك",
+      "forgotPassword": "هل نسيت كلمة السر؟",
+      "don'tHaveAccount": "ليس لديك حساب؟ "
+    },
+    "signUp": {
+      "titleDescription": "سجل لتستمع بالمزايا",
+      "haveAccount": "هل لديك حساب بالفعل؟ "
+    },
+    "forms": {
+      "userName": "الأسم",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة السر",
+      "confirmPassword": "تأكيد كلمة السر",
+      "logIn": "تسجيل الدخول",
+      "register": "سجل"
+    }
+  },
   "home": {
     "just-release": "الأفلام القادمة",
     "popular-week": "الأشهر خلال الأسبوع",

@@ -1,0 +1,1 @@
+import{Na as i,Oa as r,Ob as s,W as o,_a as a,db as p}from"./chunk-CIOQFN67.js";var l=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-sign-up"]],standalone:!0,features:[p],decls:2,vars:0,template:function(n,d){n&1&&(i(0,"p"),a(1,"sign-up works!"),r())},dependencies:[s]});let t=e;return t})();export{l as SignUpComponent};

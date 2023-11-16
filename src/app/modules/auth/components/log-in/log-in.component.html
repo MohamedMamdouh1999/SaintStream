@@ -1,0 +1,24 @@
+<section>
+  <div class="container fx-middle h-100">
+    <div class="border p-3 rounded-3">
+      <img priority height="32" width="154" ngSrc="assets/media/logos/Main-Logo.svg" alt="SaintStream"/>
+      <p class="mb-0" translate="auth.logIn.titleDescription"></p>
+      <form>
+        <div class="form-group">
+          <label for="email" translate="auth.forms.email"></label>
+          <input class="form-control shadow-none" type="email" name="email" id="email" placeholder="{{'auth.forms.email' | translate}}">
+        </div>
+        <div class="form-group">
+          <label for="password" translate="auth.forms.password"></label>
+          <input class="form-control shadow-none" type="password" name="password" id="password" placeholder="{{'auth.forms.password' | translate}}">
+        </div>
+        <h4 translate="auth.logIn.forgotPassword"></h4>
+        <button class="btn btn-light" type="submit" translate="auth.forms.logIn"></button>
+        <div>
+          <span translate="auth.logIn.don'tHaveAccount"></span>
+          <a routerLink="auth/sig-up" translate="auth.forms.register"></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
