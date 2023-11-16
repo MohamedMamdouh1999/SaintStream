@@ -1,14 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { CarouselModule } from 'primeng/carousel';
+import { TranslateService } from '@ngx-translate/core';
 import { IMedia } from '../../interfaces/imedia';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
 
 @Component({
   selector: 'app-media-popular',
-  standalone: true,
-  imports: [CommonModule, CarouselModule, TranslateModule, NgOptimizedImage],
   templateUrl: './media-popular.component.html',
   styleUrl: './media-popular.component.scss'
 })

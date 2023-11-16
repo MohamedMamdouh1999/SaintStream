@@ -1,0 +1,21 @@
+:host ::ng-deep {
+  .p-ripple {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--ripple-bgc);
+    &.p-disabled {
+      opacity: 0;
+    }
+  }
+}
+a {
+  width: 280px;
+  height: 183px;
+  background-size: cover;
+  background-position: center;
+  @media screen and (max-width: 767px) {
+    & {
+      width: 100%;
+    }
+  }
+}

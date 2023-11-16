@@ -1,15 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CarouselModule } from 'primeng/carousel';
 import { IMedia } from '../../../shared/interfaces/imedia';
-import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
 
 @Component({
   selector: 'app-media-inset-info',
-  standalone: true,
-  imports: [CommonModule, CarouselModule, TranslateModule],
   templateUrl: './media-inset-info.component.html',
   styleUrl: './media-inset-info.component.scss'
 })

@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MediaService } from '../../modules/shared/services/media.service';
 import { IMedia } from '../../modules/shared/interfaces/imedia';
-import { MediaInsetInfoComponent } from '../../modules/shared/components/media-inset-info/media-inset-info.component';
-import { MediaPopularComponent } from '../../modules/shared/components/media-popular/media-popular.component';
+import { SharedModule } from '../../modules/shared/shared.module';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MediaInsetInfoComponent, MediaPopularComponent],
+  imports: [SharedModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -9,16 +9,13 @@ article {
       &:first-of-type {
         font-size: 14px;
         width: fit-content;
-        color: var(--gray-color);
-        border-color: var(--light-gray-color) !important;
+        color: var(--genres-color);
+        border-color: var(--border-color) !important;
       }
       &:last-of-type {
-        span {
-          font-size: 13px;
-        }
         span:last-of-type {
-          color: var(--gray-color);
-          border-color: var(--gray-color) !important;
+          color: var(--genres-color);
+          border-color: var(--genres-color) !important;
         }
       }
     }

@@ -1,20 +1,20 @@
 // Packages
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
 @import './../node_modules/primeng/resources/themes/lara-light-blue/theme.css';
 @import './../node_modules/primeng/resources/primeng.min.css';
 @import './../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --main-color: #0d0c0f;
-  --gray-color: #78828a;
-  --light-gray-color: #ffffff1a;
+  --main-color: #0D0C0F;
   --ripple-bgc: #28262D;
+  --rate-color: #F9F9F9;
+  --genres-color: #78828a;
+  --border-color: #ffffff1a;
 
-  --title-color: #3b3e42;
-  --form-bgc: #0d0c0f;
-  --form-border: #1d1c21;
-  --input-bgc: #09080a;
+  // --title-color: #3b3e42;
+  // --form-border: #1d1c21;
+  // --input-bgc: #09080a;
 }
 // Global Rules
 * {
@@ -67,6 +67,14 @@ a {
   }
 }
 // Global Style
+.rate {
+  font-size: 13px;
+  color: var(--rate-color);
+  margin-inline-start: 5px;
+  + span {
+    font-size: 13px;
+  }
+}
 input {
   color: var(--form-border);
   background-color: var(--form-bgc);
