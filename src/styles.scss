@@ -72,7 +72,11 @@ a {
   font-size: 13px;
 }
 .genres {
+  i {
+    font-size: 16px;
+  }
   color: var(--genres-color);
+  border-color: var(--genres-color) !important;
   span {
     border-color: var(--genres-color) !important;
   }

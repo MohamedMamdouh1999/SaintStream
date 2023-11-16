@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
 import { IMedia } from '../../interfaces/imedia';
+import { IGenre } from '../../interfaces/igenres';
 
 @Component({
   selector: 'app-media-outset-info',
@@ -23,4 +24,5 @@ export class MediaOutsetInfoComponent {
   responsiveOptions: IResponsiveOption[];
   @Input({required: true}) title!: string;
   @Input({required: true}) medias!: IMedia[];
+  @Input({required: true}) genres!: IGenre[];
 }

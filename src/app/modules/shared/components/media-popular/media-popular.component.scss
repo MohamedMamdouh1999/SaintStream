@@ -12,12 +12,6 @@ article {
         color: var(--genres-color);
         border-color: var(--border-color) !important;
       }
-      &:last-of-type {
-        span:last-of-type {
-          color: var(--genres-color);
-          border-color: var(--genres-color) !important;
-        }
-      }
     }
   }
   @media screen and (max-width: 575px) {

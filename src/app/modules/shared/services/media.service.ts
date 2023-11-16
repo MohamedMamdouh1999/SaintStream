@@ -14,12 +14,10 @@ export class MediaService {
     'accept': 'application/json'
   };
   url: string = 'https://api.themoviedb.org/3/';
-
   getMedia(media: string, type: string, page: number = 1): Observable<IMedias> {
     return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=${page}`, {headers: this.headers})
   }
-
-  getGenres(language: string): Observable<IGenres> {
-    return this.http.get<IGenres>(this.url + `genre/movie/list?language=${language}`, {headers:this.headers})
+  getGenres(media: string,language: string): Observable<IGenres> {
+    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=${language}`, {headers:this.headers})
   }
 }
