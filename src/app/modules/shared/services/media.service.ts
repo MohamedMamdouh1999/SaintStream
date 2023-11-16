@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMedias } from './../interfaces/imedias';
+import { IGenres } from '../interfaces/igenres';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,11 @@ export class MediaService {
   };
   url: string = 'https://api.themoviedb.org/3/';
 
-  getMedia(media: string, type: string, page: number = 1):Observable<IMedias> {
+  getMedia(media: string, type: string, page: number = 1): Observable<IMedias> {
     return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=${page}`, {headers: this.headers})
+  }
+
+  getGenres(language: string): Observable<IGenres> {
+    return this.http.get<IGenres>(this.url + `genre/movie/list?language=${language}`, {headers:this.headers})
   }
 }

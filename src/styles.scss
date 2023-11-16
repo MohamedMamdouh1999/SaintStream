@@ -67,16 +67,22 @@ a {
   }
 }
 // Global Style
+.genres,
 .rate {
   font-size: 13px;
-  color: var(--rate-color);
-  margin-inline-start: 5px;
-  + span {
-    font-size: 13px;
+}
+.genres {
+  color: var(--genres-color);
+  span {
+    border-color: var(--genres-color) !important;
   }
 }
-input {
-  color: var(--form-border);
-  background-color: var(--form-bgc);
-  border-color: var(--form-border) !important;
+.rate {
+  margin-left: 5px;
+  color: var(--rate-color);
 }
+// input {
+//   color: var(--form-border);
+//   background-color: var(--form-bgc);
+//   border-color: var(--form-border) !important;
+// }
