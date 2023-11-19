@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { SharedModule } from '../../../modules/shared/shared.module';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, TranslateModule, RouterModule],
+  imports: [SharedModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

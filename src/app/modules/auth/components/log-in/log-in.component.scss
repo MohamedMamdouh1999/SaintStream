@@ -1,8 +1,22 @@
 section {
   height: 100vh;
   min-height: 100vh;
-  > div > div {
-    background-color: var(--form-bgc);
-    border-color: var(--form-border) !important;
+  .container > div {
+    width: 100%;
+    border: none;
+    img + p,
+    span {
+      color: var(--genres-color);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      background-color: #09080b;
+      .container > div {
+        width: 60%;
+        background-color: var(--main-color);
+        border: 1px solid var(--border-color);
+      }
+    }
   }
 }

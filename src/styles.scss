@@ -11,10 +11,7 @@
   --rate-color: #F9F9F9;
   --genres-color: #78828a;
   --border-color: #ffffff1a;
-
-  // --title-color: #3b3e42;
-  // --form-border: #1d1c21;
-  // --input-bgc: #09080a;
+  --input-bgc: #08070a;
 }
 // Global Rules
 * {
@@ -85,8 +82,7 @@ a {
   margin-left: 5px;
   color: var(--rate-color);
 }
-// input {
-//   color: var(--form-border);
-//   background-color: var(--form-bgc);
-//   border-color: var(--form-border) !important;
-// }
+input {
+  border-color: var(--border-color) !important;
+  background-color: var(--input-bgc) !important;
+}

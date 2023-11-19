@@ -6,21 +6,31 @@ import { MediaInsetInfoComponent } from './components/media-inset-info/media-ins
 import { MediaOutsetInfoComponent } from './components/media-outset-info/media-outset-info.component';
 import { MediaPopularComponent } from './components/media-popular/media-popular.component';
 import { MediaPeopleComponent } from './components/media-people/media-people.component';
+import { RouterModule } from '@angular/router';
+import { InputTextComponent } from './components/input-text/input-text.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
+    InputTextComponent,
     MediaPeopleComponent,
     MediaPopularComponent,
     MediaInsetInfoComponent,
     MediaOutsetInfoComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     CarouselModule,
     TranslateModule,
     NgOptimizedImage
   ],
   exports: [
+    CommonModule,
+    RouterModule,
+    TranslateModule,
+    NgOptimizedImage,
+    InputTextComponent,
     MediaPeopleComponent,
     MediaPopularComponent,
     MediaInsetInfoComponent,

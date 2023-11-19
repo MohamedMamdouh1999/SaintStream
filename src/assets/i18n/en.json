@@ -29,7 +29,12 @@
       "password": "Password",
       "confirmPassword": "Confirm Password",
       "logIn": "Login",
-      "register": "Register"
+      "register": "Register",
+      "errors": {
+        "required": "This field is required",
+        "email": "You must enter a valid email",
+        "password": "You must enter a password with a length of at least 5"
+      }
     }
   },
   "home": {

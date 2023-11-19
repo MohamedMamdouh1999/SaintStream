@@ -1,22 +1,28 @@
 <section>
-  <div class="container fx-middle h-100">
-    <div class="border p-3 rounded-3">
+  <div class="container h-100 fx-middle">
+    <div class="p-4 rounded-3">
       <img priority height="32" width="154" ngSrc="assets/media/logos/Main-Logo.svg" alt="SaintStream"/>
-      <p class="mb-0" translate="auth.logIn.titleDescription"></p>
-      <form>
-        <div class="form-group">
-          <label for="email" translate="auth.forms.email"></label>
-          <input class="form-control shadow-none" type="email" name="email" id="email" placeholder="{{'auth.forms.email' | translate}}">
-        </div>
-        <div class="form-group">
-          <label for="password" translate="auth.forms.password"></label>
-          <input class="form-control shadow-none" type="password" name="password" id="password" placeholder="{{'auth.forms.password' | translate}}">
-        </div>
-        <h4 translate="auth.logIn.forgotPassword"></h4>
-        <button class="btn btn-light" type="submit" translate="auth.forms.logIn"></button>
-        <div>
+      <p class="mb-4" translate="auth.logIn.titleDescription"></p>
+      <form [formGroup]="logIn" (ngSubmit)="submit(logIn)" #form="ngForm">
+        <app-input-text formControlName="email"
+        [type]="'email'" [label]="'email'" [errors]="logIn.get('email')?.errors"
+        [submitted]="form.submitted"
+        [touched]="logIn.get('email')?.touched"
+        [required]="logIn.get('email')?.getError('required')"
+        [patternEmail]="logIn.get('email')?.getError('pattern')"></app-input-text>
+
+        <app-input-text formControlName="password"
+        [type]="'password'" [label]="'password'" [errors]="logIn.get('password')?.errors"
+        [submitted]="form.submitted"
+        [touched]="logIn.get('password')?.touched"
+        [required]="logIn.get('password')?.getError('required')"
+        [patternPassword]="logIn.get('password')?.getError('pattern')"></app-input-text>
+
+        <a routerLink="/auth/forgot-password" class="d-block text-center my-3" translate="auth.logIn.forgotPassword"></a>
+        <button class="btn btn-light w-100 mb-3" type="submit" translate="auth.forms.logIn"></button>
+        <div class="text-center">
           <span translate="auth.logIn.don'tHaveAccount"></span>
-          <a routerLink="auth/sig-up" translate="auth.forms.register"></a>
+          <a routerLink="/auth/sign-up" translate="auth.forms.register"></a>
         </div>
       </form>
     </div>
