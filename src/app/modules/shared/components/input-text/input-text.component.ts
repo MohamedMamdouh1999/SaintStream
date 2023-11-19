@@ -18,6 +18,8 @@ export class InputTextComponent implements ControlValueAccessor {
   @Input() required!: boolean;
   @Input() patternEmail!: boolean;
   @Input() patternPassword!: boolean;
+  @Input() patternFirstName!: boolean;
+  @Input() patternConfirmPassword!: boolean;
   @Input() label!: string;
   @Input() type!: string;
   value!: string;

@@ -24,7 +24,7 @@
       "haveAccount": "Already have an account? "
     },
     "forms": {
-      "userName": "Username",
+      "firstName": "First Name",
       "email": "Email",
       "password": "Password",
       "confirmPassword": "Confirm Password",
@@ -32,8 +32,10 @@
       "register": "Register",
       "errors": {
         "required": "This field is required",
+        "firstName": "You must enter the first name",
         "email": "You must enter a valid email",
-        "password": "You must enter a password with a length of at least 5"
+        "password": "You must enter a password with a length of at least 5",
+        "confirmPassword": "Both passwords do not match"
       }
     }
   },

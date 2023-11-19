@@ -1,1 +1,0 @@
-import{e as a}from"./chunk-234P6PGU.js";import"./chunk-5WAFK4RJ.js";import{W as n,gb as r}from"./chunk-CKSJ4H6S.js";var c=(()=>{let e=class e{};e.\u0275fac=function(o){return new(o||e)},e.\u0275cmp=n({type:e,selectors:[["app-discover"]],standalone:!0,features:[r],decls:0,vars:0,template:function(o,s){},dependencies:[a]});let t=e;return t})();export{c as DiscoverComponent};

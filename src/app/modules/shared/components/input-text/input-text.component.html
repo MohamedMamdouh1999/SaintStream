@@ -3,13 +3,19 @@
   <input [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control mt-1 text-white shadow-none" [type]="type" [id]="label" [name]="label" placeholder="{{'auth.forms.' + label | translate}}"/>
   @if (submitted || (errors && touched)) {
     @if ((submitted || touched) && required) {
-      <p class="text-danger mt-1" translate="auth.forms.errors.required"></p>
+      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.required"></p>
+    }
+    @if (patternFirstName) {
+      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.firstName"></p>
     }
     @if (patternEmail) {
-      <p class="text-danger mt-1" translate="auth.forms.errors.email"></p>
+      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.email"></p>
     }
     @if (patternPassword) {
-      <p class="text-danger mt-1" translate="auth.forms.errors.password"></p>
+      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.password"></p>
+    }
+    @if (patternConfirmPassword) {
+      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.confirmPassword"></p>
     }
   }
 </div>
