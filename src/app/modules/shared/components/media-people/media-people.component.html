@@ -1,5 +1,5 @@
 <article class="mb-4">
-  <h4 class="mb-3 text-center" translate="home.actors"></h4>
+  <h4 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" translate="home.actors"></h4>
   <p-carousel dir="ltr" [value]="people" [showIndicators]="false" [numVisible]="3.5" [numScroll]="2" [responsiveOptions]="responsiveOptions">
     <ng-template let-person pTemplate="person">
       <a class="text-center d-inline-block">
