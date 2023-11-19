@@ -1,0 +1,11 @@
+<article class="mb-4">
+  <h4 class="mb-3 text-center" translate="home.actors"></h4>
+  <p-carousel dir="ltr" [value]="people" [showIndicators]="false" [numVisible]="3.5" [numScroll]="2" [responsiveOptions]="responsiveOptions">
+    <ng-template let-person pTemplate="person">
+      <a class="text-center d-inline-block">
+        <img class="rounded-4" priority width="200" height="300" [ngSrc]="'https://image.tmdb.org/t/p/w200'+person.profile_path" [alt]="person.name">
+        <p class="mb-0 mt-1">{{person.name}}</p>
+      </a>
+    </ng-template>
+  </p-carousel>
+</article>

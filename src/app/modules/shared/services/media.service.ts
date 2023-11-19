@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMedias } from './../interfaces/imedias';
 import { IGenres } from '../interfaces/igenres';
+import { IPeople } from '../interfaces/ipeople';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +15,13 @@ export class MediaService {
     'accept': 'application/json'
   };
   url: string = 'https://api.themoviedb.org/3/';
+  getPeople(): Observable<IPeople> {
+    return this.http.get<IPeople>(this.url + `trending/person/day?language=en-US`, {headers:this.headers})
+  }
+  getGenres(media: string, language: string): Observable<IGenres> {
+    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=${language}`, {headers:this.headers})
+  }
   getMedia(media: string, type: string, page: number = 1): Observable<IMedias> {
     return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=${page}`, {headers: this.headers})
-  }
-  getGenres(media: string,language: string): Observable<IGenres> {
-    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=${language}`, {headers:this.headers})
   }
 }

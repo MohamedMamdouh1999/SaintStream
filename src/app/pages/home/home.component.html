@@ -1,5 +1,6 @@
 <main class="mt-3 mb-5">
   <div class="container">
+    <app-media-people [people]="people"></app-media-people>
     <app-media-inset-info [title]="'home.just-release'" [medias]="releaseMovies" [genres]="movieGenres"></app-media-inset-info>
     <app-media-popular [medias]="popularMovies"></app-media-popular>
     <app-media-outset-info [title]="'home.movies'" [medias]="movies" [genres]="movieGenres"></app-media-outset-info>

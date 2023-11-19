@@ -5,12 +5,14 @@ import { CarouselModule } from 'primeng/carousel';
 import { MediaInsetInfoComponent } from './components/media-inset-info/media-inset-info.component';
 import { MediaOutsetInfoComponent } from './components/media-outset-info/media-outset-info.component';
 import { MediaPopularComponent } from './components/media-popular/media-popular.component';
+import { MediaPeopleComponent } from './components/media-people/media-people.component';
 
 @NgModule({
   declarations: [
+    MediaPeopleComponent,
+    MediaPopularComponent,
     MediaInsetInfoComponent,
-    MediaOutsetInfoComponent,
-    MediaPopularComponent
+    MediaOutsetInfoComponent
   ],
   imports: [
     CommonModule,
@@ -19,9 +21,10 @@ import { MediaPopularComponent } from './components/media-popular/media-popular.
     NgOptimizedImage
   ],
   exports: [
+    MediaPeopleComponent,
+    MediaPopularComponent,
     MediaInsetInfoComponent,
-    MediaOutsetInfoComponent,
-    MediaPopularComponent
+    MediaOutsetInfoComponent
   ]
 })
 export class SharedModule { }

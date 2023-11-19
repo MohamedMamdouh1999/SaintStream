@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IMedia } from '../../../shared/interfaces/imedia';
 import { TranslateService } from '@ngx-translate/core';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
-import { IGenre } from '../../interfaces/igenres';
+import { IGenre } from '../../interfaces/igenre';
 
 @Component({
   selector: 'app-media-inset-info',

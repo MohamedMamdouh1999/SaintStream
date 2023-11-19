@@ -4,6 +4,7 @@ interface IDates {
   maximum: string,
   minimum: string
 }
+
 export interface IMedias {
   page: number,
   dates: IDates,

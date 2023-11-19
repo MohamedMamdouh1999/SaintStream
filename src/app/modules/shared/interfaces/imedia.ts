@@ -5,6 +5,7 @@ export interface IMedia {
   video: boolean,
   adult: boolean,
   overview: string,
+  media_type: string,
   vote_count: number,
   popularity: number,
   poster_path: string,
