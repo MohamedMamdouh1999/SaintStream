@@ -1,5 +1,5 @@
-<section>
-  <div class="container h-100 fx-middle">
+<section class="py-5">
+  <div class="container fx-middle">
     <div class="p-4 rounded-3">
       <img priority height="32" width="154" ngSrc="assets/media/logos/Main-Logo.svg" alt="SaintStream"/>
       <p class="mb-4" translate="auth.signUp.titleDescription"></p>
@@ -10,29 +10,39 @@
         [touched]="signUp.get('firstName')?.touched"
         [required]="signUp.get('firstName')?.getError('required')"
         [patternFirstName]="signUp.get('firstName')?.getError('pattern')"></app-input-text>
-
         <app-input-text formControlName="email"
         [type]="'email'" [label]="'email'" [errors]="signUp.get('email')?.errors"
         [submitted]="form.submitted"
         [touched]="signUp.get('email')?.touched"
         [required]="signUp.get('email')?.getError('required')"
         [patternEmail]="signUp.get('email')?.getError('pattern')"></app-input-text>
-
         <app-input-text formControlName="password"
         [type]="'password'" [label]="'password'" [errors]="signUp.get('password')?.errors"
         [submitted]="form.submitted"
         [touched]="signUp.get('password')?.touched"
         [required]="signUp.get('password')?.getError('required')"
         [patternPassword]="signUp.get('password')?.getError('pattern')"></app-input-text>
-
         <app-input-text formControlName="confirmPassword"
-        [type]="'confirmPassword'" [label]="'confirmPassword'" [errors]="signUp.get('confirmPassword')?.errors"
+        [type]="'password'" [label]="'confirmPassword'" [errors]="signUp.get('confirmPassword')?.errors"
         [submitted]="form.submitted"
         [touched]="signUp.get('confirmPassword')?.touched"
         [required]="signUp.get('confirmPassword')?.getError('required')"
         [patternConfirmPassword]="signUp.get('confirmPassword')?.value !== signUp.get('password')?.value"></app-input-text>
-
-        <button class="btn btn-light w-100 mb-3" type="submit" translate="auth.forms.register"></button>
+        <div class="form-group my-4">
+          <div class="fx">
+            <div class="position-relative">
+              <input formControlName="privacyTerms" type="checkbox" id="checkbox"/>
+              <label for="checkbox"></label>
+            </div>
+            <p class="mb-0" translate="auth.signUp.privacyTerms"></p>
+          </div>
+          @if (form.submitted || (signUp.get("privacyTerms")?.errors && signUp.get("privacyTerms")?.touched)) {
+            @if ((form.submitted || signUp.get("privacyTerms")?.touched) && signUp.get("privacyTerms")?.getError("required")) {
+              <span class="text-danger mt-1 d-inline-block" translate="auth.forms.errors.required"></span>
+            }
+          }
+        </div>
+        <button class="btn btn-success w-100 mb-3" type="submit" translate="auth.forms.register"></button>
         <div class="text-center">
           <span translate="auth.signUp.haveAccount"></span>
           <a routerLink="/auth/log-in" translate="auth.forms.logIn"></a>

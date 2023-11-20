@@ -1,12 +1,49 @@
 section {
-  height: 100vh;
-  min-height: 100vh;
   .container > div {
     width: 100%;
     border: none;
-    img + p,
+    p,
     span {
       color: var(--genres-color);
+    }
+    .form-group {
+      label {
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        &:after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 7px;
+          opacity: 0;
+          width: 12px;
+          height: 6px;
+          border: 2px solid #fff;
+          border-top: none;
+          border-right: none;
+          transform: rotate(-45deg);
+        }
+      }
+      input[type="checkbox"] {
+        visibility: hidden;
+        &:checked + label {
+          border-color: #00925d;
+          background-color: #00925d;
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+      p {
+        margin-inline-start: 25px;
+      }
     }
   }
   @media screen and (min-width: 768px) {
@@ -20,3 +57,7 @@ section {
     }
   }
 }
+
+
+
+

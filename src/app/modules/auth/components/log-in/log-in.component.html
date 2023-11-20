@@ -1,5 +1,5 @@
-<section>
-  <div class="container h-100 fx-middle">
+<section class="py-5">
+  <div class="container fx-middle">
     <div class="p-4 rounded-3">
       <img priority height="32" width="154" ngSrc="assets/media/logos/Main-Logo.svg" alt="SaintStream"/>
       <p class="mb-4" translate="auth.logIn.titleDescription"></p>
@@ -19,7 +19,7 @@
         [patternPassword]="logIn.get('password')?.getError('pattern')"></app-input-text>
 
         <a routerLink="/auth/forgot-password" class="d-block text-center my-3" translate="auth.logIn.forgotPassword"></a>
-        <button class="btn btn-light w-100 mb-3" type="submit" translate="auth.forms.logIn"></button>
+        <button class="btn btn-success w-100 mb-3" type="submit" translate="auth.forms.logIn"></button>
         <div class="text-center">
           <span translate="auth.logIn.don'tHaveAccount"></span>
           <a routerLink="/auth/sign-up" translate="auth.forms.register"></a>
