@@ -21,7 +21,8 @@
     },
     "signUp": {
       "titleDescription": "Register to enjoy the features",
-      "haveAccount": "Already have an account? "
+      "haveAccount": "Already have an account? ",
+      "privacyTerms": "I agree to our Privacy Policy and Term & conditions"
     },
     "forms": {
       "firstName": "First Name",
