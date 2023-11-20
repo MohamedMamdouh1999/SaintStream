@@ -1,6 +1,9 @@
 header {
   z-index: 100;
-  background-color: var(--main-color);
+  transition: background-color .3s ease-in-out;
+  &.scroll-header {
+    background-color: var(--main-color);
+  }
   button img {
     margin-inline-end: 10px;
   }

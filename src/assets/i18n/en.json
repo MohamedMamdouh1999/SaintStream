@@ -41,12 +41,14 @@
     }
   },
   "home": {
+    "watchTrailer": "Watch Trailer",
     "just-release": "Just Release",
     "popular-week": "Popular of the week",
     "movies": "Movies",
     "series": "Series",
     "movie": "Movie",
-    "actors": "Actors"
+    "actors": "Actors",
+    "actresses": "Actresses"
   },
   "footer": {
     "ourAchievment": "Our platform is trusted by millions & features best updated movies and series all around the world.",

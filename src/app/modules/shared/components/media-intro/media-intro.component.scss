@@ -1,0 +1,68 @@
+:host ::ng-deep {
+  .p-carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    margin: 0 10px;
+    .p-highlight button{
+      background-color: #FFF;
+    }
+    .p-link {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-inline-end: 5px;
+      background-color: #55545b;
+    }
+    @media screen and (max-width: 991px) {
+      & {
+        right: 50%;
+        margin: 0px;
+        transform: translateX(50%);
+        .p-link {
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+section {
+  .poster-layer {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    .overlay-layer {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(0deg,
+        rgb(13, 12, 15, 1) 0%,
+        rgb(13, 12, 15, 0.9) 10%,
+        rgb(13, 12, 15, 0.8) 20%,
+        rgb(13, 12, 15, 0.6) 30%,
+        rgb(13, 12, 15, 0.3) 40%,
+        rgb(13, 12, 15, 0.1) 50%,
+        rgb(13, 12, 15, 0.3) 60%,
+        rgb(13, 12, 15, 0.6) 70%,
+        rgb(13, 12, 15, 0.8) 80%,
+        rgb(13, 12, 15, 0.9) 90%,
+        rgb(13, 12, 15, 1) 100%
+      );
+      .movie-info {
+        width: 50%;
+        .genres {
+          color: #55545b;
+          span {
+            border-color: #55545b !important;
+          }
+        }
+        @media screen and (max-width: 991px) {
+          & {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -21,5 +21,6 @@ export class MediaPeopleComponent {
   }
   isRtl: boolean = false;
   responsiveOptions: IResponsiveOption[];
+  @Input({required: true}) title!: string;
   @Input({required: true}) people!: IPerson[];
 }

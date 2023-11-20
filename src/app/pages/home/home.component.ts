@@ -36,12 +36,16 @@ export class HomeComponent {
   popularMovies!: IMedia[];
   movieGenres!: IGenre[];
   tvGenres!: IGenre[];
-  people!: IPerson[];
+  actors!: IPerson[];
+  actresses!: IPerson[];
   movies!: IMedia[];
   series!: IMedia[];
   getPeople(): void {
     this.http.getPeople().subscribe({
-      next: (data) => this.people = data.results,
+      next: (data) => {
+        this.actors = data.results.filter(actor => actor.gender === 2)
+        this.actresses = data.results.filter(actress => actress.gender === 1)
+      }
     });
   }
   getMedia(media: string, type: string): void {

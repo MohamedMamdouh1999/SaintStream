@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateService } from "@ngx-translate/core";
 import { SharedModule } from '../../../modules/shared/shared.module';
 
@@ -17,6 +17,7 @@ export class HeaderComponent {
       next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
     })
   }
+  isBottom!: boolean;
   isRtl: boolean = false;
   currentLanguage: string;
   isShowNav: boolean = false;
@@ -27,5 +28,9 @@ export class HeaderComponent {
   changeCurrentLanguage(language: string){
     this.translate.use(language)
     localStorage.setItem("currentLanguage", language)
+  }
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    (window.scrollY > (window.innerHeight / 5)) ? this.isBottom = true : this.isBottom = false
   }
 }

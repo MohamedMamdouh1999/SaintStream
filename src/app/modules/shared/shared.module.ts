@@ -9,10 +9,12 @@ import { MediaPeopleComponent } from './components/media-people/media-people.com
 import { RouterModule } from '@angular/router';
 import { InputTextComponent } from './components/input-text/input-text.component';
 import { FormsModule } from '@angular/forms';
+import { MediaIntroComponent } from './components/media-intro/media-intro.component';
 
 @NgModule({
   declarations: [
     InputTextComponent,
+    MediaIntroComponent,
     MediaPeopleComponent,
     MediaPopularComponent,
     MediaInsetInfoComponent,
@@ -31,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     TranslateModule,
     NgOptimizedImage,
     InputTextComponent,
+    MediaIntroComponent,
     MediaPeopleComponent,
     MediaPopularComponent,
     MediaInsetInfoComponent,
