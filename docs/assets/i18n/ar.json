@@ -2,8 +2,8 @@
   "header": {
     "links": {
       "home": "الصفحة الرئيسية",
-      "discover": "إكتشف",
-      "movie-release": "الأفلام القادمة",
+      "series": "مسلسلات تلفزيونية",
+      "movieRelease": "الأفلام القادمة",
       "forum": "المنتدى",
       "about": "من نحن"
     },
@@ -40,13 +40,14 @@
       }
     }
   },
-  "home": {
+  "pages": {
     "watchTrailer": "مشاهدة الأعلان",
-    "just-release": "الأفلام القادمة",
-    "popular-week": "الأشهر خلال الأسبوع",
-    "movies": "الأفلام",
-    "series": "المسلسلات",
+    "airingToday": "يبث اليوم",
+    "nowPlaying": "يعرض الأن",
+    "popularWeek": "الأشهر خلال الأسبوع",
+    "topRated": "الأعلى تقييمًا",
     "movie": "فلم",
+    "series": "مسلسل",
     "actors": "الممثلين",
     "actresses": "الممثلات"
   },

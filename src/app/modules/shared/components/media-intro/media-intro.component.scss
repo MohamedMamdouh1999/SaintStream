@@ -48,8 +48,15 @@ section {
         rgb(13, 12, 15, 0.9) 90%,
         rgb(13, 12, 15, 1) 100%
       );
-      .movie-info {
+      .media-info {
         width: 50%;
+        > p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
         .genres {
           color: #55545b;
           span {

@@ -2,8 +2,8 @@
   "header": {
     "links": {
       "home": "Home",
-      "discover": "Discover",
-      "movie-release": "Movie Release",
+      "series": "TV Series",
+      "movieRelease": "Movie Release",
       "forum": "Forum",
       "about": "About"
     },
@@ -40,13 +40,14 @@
       }
     }
   },
-  "home": {
+  "pages": {
     "watchTrailer": "Watch Trailer",
-    "just-release": "Just Release",
-    "popular-week": "Popular of the week",
-    "movies": "Movies",
-    "series": "Series",
+    "airingToday": "Airing Today",
+    "nowPlaying": "Now Playing",
+    "popularWeek": "Popular of the week",
+    "topRated": "Top Rated",
     "movie": "Movie",
+    "series": "Series",
     "actors": "Actors",
     "actresses": "Actresses"
   },

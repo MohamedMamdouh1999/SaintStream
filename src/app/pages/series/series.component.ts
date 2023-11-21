@@ -1,45 +1,45 @@
 import { Component } from '@angular/core';
-import { MediaService } from '../../modules/shared/services/media.service';
 import { SharedModule } from '../../modules/shared/shared.module';
+import { MediaService } from '../../modules/shared/services/media.service';
+import { IPerson } from '../../modules/shared/interfaces/iperson';
 import { IMedia } from '../../modules/shared/interfaces/imedia';
 import { IGenre } from '../../modules/shared/interfaces/igenre';
-import { IPerson } from '../../modules/shared/interfaces/iperson';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-series',
   standalone: true,
   imports: [SharedModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './series.component.html',
+  styleUrl: './series.component.scss'
 })
-export class HomeComponent {
+export class SeriesComponent {
   constructor(private http: MediaService) {
     this.getGenres();
-    this.getMovies('upcoming');
-    this.getMovies('now_playing');
-    this.getMovies('top_rated');
-    this.getMovies('popular');
+    this.getSeries('on_the_air');
+    this.getSeries('airing_today');
+    this.getSeries('top_rated');
+    this.getSeries('popular');
     this.getPeople()
   }
 
   genres!: IGenre[];
-  upComing!: IMedia[];
-  nowPlaying!: IMedia[];
+  onTheAir!: IMedia[];
+  airingToday!: IMedia[];
   topRated!: IMedia[];
   popular!: IMedia[];
   actors!: IPerson[];
   actresses!: IPerson[];
 
   getGenres(): void {
-    this.http.getGenres('movie').subscribe({
+    this.http.getGenres('tv').subscribe({
       next: (data) => this.genres = data.genres
     });
   }
-  getMovies(type: string): void {
-    this.http.getMedia('movie', type).subscribe({
+  getSeries(type: string): void {
+    this.http.getMedia('tv', type).subscribe({
       next: (data) => {
-        if (type === 'upcoming') this.upComing = data.results;
-        else if (type === 'now_playing') this.nowPlaying = data.results;
+        if (type === 'on_the_air') this.onTheAir = data.results;
+        else if (type === 'airing_today') this.airingToday = data.results;
         else if (type === 'top_rated') this.topRated = data.results;
         else if (type === 'popular') this.popular = data.results;
       }

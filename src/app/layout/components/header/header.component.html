@@ -1,40 +1,119 @@
-<header [ngClass]="isBottom ? 'scroll-header' : ''" class="navbar navbar-expand-lg py-3 position-fixed start-0 end-0 top-0">
+<header
+  [ngClass]="isBottom ? 'scroll-header' : ''"
+  class="navbar navbar-expand-lg py-3 position-fixed start-0 end-0 top-0"
+>
   <div class="container">
-    <img priority height="32" width="154" ngSrc="assets/media/logos/Main-Logo.svg" alt="SaintStream"/>
-    <button (click)="toggleNavBar()" class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i style="font-size: 25px" class="fa-solid fa-bars-staggered text-white"></i>
+    <img
+      priority
+      height="32"
+      width="154"
+      ngSrc="assets/media/logos/Main-Logo.svg"
+      alt="SaintStream"
+    />
+    <button
+      (click)="toggleNavBar()"
+      class="navbar-toggler shadow-none border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i
+        style="font-size: 25px"
+        class="fa-solid fa-bars-staggered text-white"
+      ></i>
     </button>
-    <div [ngClass]="isShowNav ? 'fx-column text-center' : 'd-none'" class="navbar-collapse" id="navbarSupportedContent">
+    <div
+      [ngClass]="isShowNav ? 'fx-column text-center' : 'd-none'"
+      class="navbar-collapse"
+      id="navbarSupportedContent"
+    >
       <ul class="navbar-nav mx-lg-auto">
         <li>
-          <a class="nav-link" (click)="toggleNavBar()" routerLink="home" routerLinkActive="activeLink" translate="header.links.home"></a>
+          <a
+            class="nav-link"
+            (click)="toggleNavBar()"
+            routerLink="home"
+            routerLinkActive="activeLink"
+            translate="header.links.home"
+          ></a>
         </li>
         <li>
-          <a class="nav-link" (click)="toggleNavBar()" routerLink="discover" routerLinkActive="activeLink" translate="header.links.discover"></a>
+          <a
+            class="nav-link"
+            (click)="toggleNavBar()"
+            routerLink="tv-series"
+            routerLinkActive="activeLink"
+            translate="header.links.series"
+          ></a>
         </li>
         <li>
-          <a class="nav-link" (click)="toggleNavBar()" routerLink="movie-release" routerLinkActive="activeLink" translate="header.links.movie-release"></a>
+          <a
+            class="nav-link"
+            (click)="toggleNavBar()"
+            routerLink="movie-release"
+            routerLinkActive="activeLink"
+            translate="header.links.movieRelease"
+          ></a>
         </li>
         <li>
-          <a class="nav-link" (click)="toggleNavBar()" routerLink="forum" routerLinkActive="activeLink" translate="header.links.forum"></a>
+          <a
+            class="nav-link"
+            (click)="toggleNavBar()"
+            routerLink="forum"
+            routerLinkActive="activeLink"
+            translate="header.links.forum"
+          ></a>
         </li>
         <li>
-          <a class="nav-link" (click)="toggleNavBar()" routerLink="about" routerLinkActive="activeLink" translate="header.links.about"></a>
+          <a
+            class="nav-link"
+            (click)="toggleNavBar()"
+            routerLink="about"
+            routerLinkActive="activeLink"
+            translate="header.links.about"
+          ></a>
         </li>
       </ul>
       <div class="mt-2 mt-lg-0 fx">
         @if (isRtl) {
-          <button class="shadow-none border-0 bg-transparent fx-middle" (click)="changeCurrentLanguage('en')">
-            <img priority height="37.33" width="56" ngSrc="assets/media/flags/us.jpg" class="rounded-1" alt="United States"/>
-          </button>
+        <button
+          class="shadow-none border-0 bg-transparent fx-middle"
+          (click)="changeCurrentLanguage('en')"
+        >
+          <img
+            priority
+            height="37.33"
+            width="56"
+            ngSrc="assets/media/flags/us.jpg"
+            class="rounded-1"
+            alt="United States"
+          />
+        </button>
         } @else {
-          <button class="shadow-none border-0 bg-transparent fx-middle" (click)="changeCurrentLanguage('ar')">
-            <img priority height="37.33" width="56" ngSrc="assets/media/flags/saudi-arabia.svg" class="rounded-1" alt="Saudi Arabia"/>
-          </button>
+        <button
+          class="shadow-none border-0 bg-transparent fx-middle"
+          (click)="changeCurrentLanguage('ar')"
+        >
+          <img
+            priority
+            height="37.33"
+            width="56"
+            ngSrc="assets/media/flags/saudi-arabia.svg"
+            class="rounded-1"
+            alt="Saudi Arabia"
+          />
+        </button>
         }
         <!-- <a routerLink="auth/log-out" class="btn btn-outline-danger" translate="header.auth.log-out"></a> -->
         <!-- <a routerLink="auth/sign-up" class="btn btn-outline-light" translate="header.auth.sign-up"></a> -->
-        <a routerLink="auth/log-in" class="btn btn-success" translate="header.auth.log-in"></a>
+        <a
+          routerLink="auth/log-in"
+          class="btn btn-success"
+          translate="header.auth.log-in"
+        ></a>
       </div>
     </div>
   </div>
