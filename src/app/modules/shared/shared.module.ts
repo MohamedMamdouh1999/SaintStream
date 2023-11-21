@@ -23,6 +23,7 @@ import { MediaIntroComponent } from './components/media-intro/media-intro.compon
   imports: [
     FormsModule,
     CommonModule,
+    RouterModule,
     CarouselModule,
     TranslateModule,
     NgOptimizedImage

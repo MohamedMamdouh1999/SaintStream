@@ -15,9 +15,9 @@ export class MediaInsetInfoComponent {
       next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
     })
     this.responsiveOptions = [
-      { breakpoint: '1199px', numVisible: 4.4, numScroll: 2 },
-      { breakpoint: '991px', numVisible: 2.3, numScroll: 2 },
-      { breakpoint: '767px', numVisible: 1.2, numScroll: 1 }
+      { breakpoint: '1199px', numVisible: 3.4, numScroll: 2 },
+      { breakpoint: '991px', numVisible: 2.4, numScroll: 2 },
+      { breakpoint: '767px', numVisible: 1, numScroll: 1 }
     ];
   }
   isRtl: boolean = false;

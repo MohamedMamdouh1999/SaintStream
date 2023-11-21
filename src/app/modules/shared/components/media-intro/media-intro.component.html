@@ -1,32 +1,34 @@
-<section class="mb-5">
-  <p-carousel dir="ltr" [value]="medias" [showNavigators]="false" [showIndicators]="true" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-    <ng-template let-media pTemplate="media">
-      <div class="poster-layer" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/original'+media.backdrop_path+')'}">
-        <div class="overlay-layer fx">
-          <div class="container">
-            <div class="media-info">
-              <h1 class="mb-0">{{media.title || media.name}}</h1>
-              @if (media.genre_ids){
-                <div class="my-2 genres fx-wrap">
-                  <p class="mb-0 fw-bold">{{media.release_date || media.first_air_date}}</p>
-                  @for (media_genre of media.genre_ids.slice(0,4); track $index){
-                    @for (genre of genres; track $index){
-                      @if (genre.id === media_genre){
-                        <span class="ps-1 fw-bold ms-1 border-2 border-start">{{genre.name}}</span>
+@if (medias) {
+  <section class="mb-5">
+    <p-carousel dir="ltr" [value]="medias" [showNavigators]="false" [showIndicators]="true" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+      <ng-template let-media pTemplate="media">
+        <div class="poster-layer" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/original'+media.backdrop_path+')'}">
+          <div class="overlay-layer fx">
+            <div class="container">
+              <div class="media-info">
+                <h1 class="mb-0">{{media.title || media.name}}</h1>
+                @if (media.genre_ids){
+                  <div class="my-2 genres fx-wrap">
+                    <p class="mb-0 fw-bold text-success">{{media.release_date || media.first_air_date}}</p>
+                    @for (media_genre of media.genre_ids.slice(0,4); track $index){
+                      @for (genre of genres; track $index){
+                        @if (genre.id === media_genre){
+                          <span class="fw-bold ps-1 ms-1 border-2 border-start text-success">{{genre.name}}</span>
+                        }
                       }
                     }
-                  }
-                </div>
-              }
-              <p class="mb-0 fw-light">{{media.overview}}</p>
-              <button class="w-75 my-2 py-2 rounded-2 btn btn-success">
-                <i class="me-2 fa-solid fa-circle-play"></i>
-                <span translate="pages.watchTrailer"></span>
-              </button>
+                  </div>
+                }
+                <p class="mb-0 fw-light">{{media.overview}}</p>
+                <button class="w-75 my-2 py-2 rounded-2 btn btn-success">
+                  <i class="me-2 fa-solid fa-circle-play"></i>
+                  <span translate="pages.watchTrailer"></span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </p-carousel>
-</section>
+      </ng-template>
+    </p-carousel>
+  </section>
+}

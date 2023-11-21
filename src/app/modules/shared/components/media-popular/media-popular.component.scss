@@ -5,6 +5,13 @@ article {
   .info-media {
     height: 157px;
     max-height: 157px;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
     div {
       &:first-of-type {
         font-size: 14px;

@@ -57,11 +57,8 @@ section {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
         }
-        .genres {
-          color: #55545b;
-          span {
-            border-color: #55545b !important;
-          }
+        span {
+          border-color: #00925d !important;
         }
         @media screen and (max-width: 991px) {
           & {

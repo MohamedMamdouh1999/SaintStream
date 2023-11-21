@@ -1,45 +1,10 @@
-a {
-  min-height: 335px;
-  img {
-    min-height: inherit;
-    + div {
-      background: linear-gradient(0deg, rgba(13,12,15,1) 0%, rgba(0,0,0,0.5) 85%, transparent 95%);
-    }
-  }
-  @media screen and (max-width: 300px) {
-    & {
-      min-height: 230px;
-      img {
-        min-height: inherit;
-      }
-    }
-  }
-  @media screen and (min-width: 380px) and (max-width: 399px) {
-    & {
-      min-height: 360px;
-      img {
-        min-height: inherit;
-      }
-    }
-  }
-  @media screen and (min-width: 400px) and (max-width: 767px) {
-    & {
-      min-height: 402px;
-      img {
-        min-height: inherit;
-      }
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    & {
-      min-height: 390px;
-      img {
-        min-height: inherit;
-      }
-    }
-  }
+a > div {
+  background: linear-gradient(0deg, rgba(13,12,15,1) 0%, rgba(0,0,0,0.5) 85%, transparent 95%);
 }
 :host ::ng-deep {
+  .p-carousel-item {
+    text-align: center;
+  }
   .p-ripple {
     color: white;
     border-radius: 50%;
