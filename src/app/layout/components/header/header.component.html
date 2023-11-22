@@ -37,8 +37,7 @@
             (click)="toggleNavBar()"
             routerLink="movies"
             routerLinkActive="activeLink"
-            translate="header.links.movies"
-          ></a>
+          >Movies</a>
         </li>
         <li>
           <a
@@ -46,8 +45,7 @@
             (click)="toggleNavBar()"
             routerLink="tv-series"
             routerLinkActive="activeLink"
-            translate="header.links.series"
-          ></a>
+          >TV Series</a>
         </li>
         <li>
           <a
@@ -55,8 +53,7 @@
             (click)="toggleNavBar()"
             routerLink="movie-release"
             routerLinkActive="activeLink"
-            translate="header.links.movieRelease"
-          ></a>
+          >Movie Release</a>
         </li>
         <li>
           <a
@@ -64,8 +61,7 @@
             (click)="toggleNavBar()"
             routerLink="forum"
             routerLinkActive="activeLink"
-            translate="header.links.forum"
-          ></a>
+          >Forum</a>
         </li>
         <li>
           <a
@@ -73,47 +69,16 @@
             (click)="toggleNavBar()"
             routerLink="about"
             routerLinkActive="activeLink"
-            translate="header.links.about"
-          ></a>
+          >About</a>
         </li>
       </ul>
-      <div class="mt-2 mt-lg-0 fx">
-        @if (isRtl) {
-        <button
-          class="shadow-none border-0 bg-transparent fx-middle"
-          (click)="changeCurrentLanguage('en')"
-        >
-          <img
-            priority
-            height="37.33"
-            width="56"
-            ngSrc="assets/media/flags/us.jpg"
-            class="rounded-1"
-            alt="United States"
-          />
-        </button>
-        } @else {
-        <button
-          class="shadow-none border-0 bg-transparent fx-middle"
-          (click)="changeCurrentLanguage('ar')"
-        >
-          <img
-            priority
-            height="37.33"
-            width="56"
-            ngSrc="assets/media/flags/saudi-arabia.svg"
-            class="rounded-1"
-            alt="Saudi Arabia"
-          />
-        </button>
-        }
-        <!-- <a routerLink="auth/log-out" class="btn btn-outline-danger" translate="header.auth.log-out"></a> -->
-        <!-- <a routerLink="auth/sign-up" class="btn btn-outline-light" translate="header.auth.sign-up"></a> -->
+      <div class="mt-2 mt-lg-0">
+        <!-- <a routerLink="auth/log-out" class="btn btn-outline-danger">Log Out</a> -->
+        <!-- <a routerLink="auth/sign-up" class="btn btn-outline-light">Sign Up</a> -->
         <a
           routerLink="auth/log-in"
           class="btn btn-success"
-          translate="header.auth.log-in"
-        ></a>
+        >Log In</a>
       </div>
     </div>
   </div>

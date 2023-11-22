@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
-import { TranslateService } from '@ngx-translate/core';
 import { IMedia } from '../../interfaces/imedia';
 
 @Component({
@@ -9,17 +8,13 @@ import { IMedia } from '../../interfaces/imedia';
   styleUrl: './media-people.component.scss'
 })
 export class MediaPeopleComponent {
-  constructor(private translate: TranslateService) {
-    translate.onLangChange.subscribe({
-      next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
-    })
+  constructor() {
     this.responsiveOptions = [
       { breakpoint: '1199px', numVisible: 3.5, numScroll: 2 },
       { breakpoint: '991px', numVisible: 2.5, numScroll: 2 },
       { breakpoint: '767px', numVisible: 1.3, numScroll: 1 }
     ];
   }
-  isRtl: boolean = false;
   responsiveOptions: IResponsiveOption[];
   @Input({required: true}) title!: string;
   @Input({required: true}) people!: IMedia[];

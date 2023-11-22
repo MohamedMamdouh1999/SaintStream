@@ -1,10 +1,8 @@
 @if (medias) {
 <article class="mb-4">
   <h3
-    class="mb-3 text-center"
-    [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'"
-    [translate]="'pages.' + title"
-  ></h3>
+    class="mb-3 text-center ms-lg-5 text-lg-start"
+  >{{title}}</h3>
   <p-carousel
     dir="ltr"
     [value]="medias"

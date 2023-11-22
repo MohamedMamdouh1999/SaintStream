@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 import { CarouselModule } from 'primeng/carousel';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -26,14 +25,12 @@ const components = [
     FormsModule,
     RouterModule,
     CarouselModule,
-    TranslateModule,
     NgOptimizedImage
   ],
   exports: [
     components,
     CommonModule,
     RouterModule,
-    TranslateModule,
     NgOptimizedImage,
     ReactiveFormsModule
   ]

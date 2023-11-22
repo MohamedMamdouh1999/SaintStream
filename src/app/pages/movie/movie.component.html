@@ -21,13 +21,13 @@
         }
       </div>
       }
-    <h5 class="mt-3 mb-1" translate="pages.storyLine"></h5>
+    <h5 class="mt-3 mb-1">Story Line</h5>
     <p class="mb-5">{{movie.overview}}</p>
     @if (similar.length > 0) {
-      <app-media-inset-info [title]="'similarMovies'" [medias]="similar" [genres]="genres"></app-media-inset-info>
+      <app-media-inset-info [title]="'Similar Movies'" [medias]="similar" [genres]="genres"></app-media-inset-info>
     }
     @if (recommendations.length > 0) {
-      <app-media-inset-info [title]="'recommendations'" [medias]="recommendations" [genres]="genres"></app-media-inset-info>
+      <app-media-inset-info [title]="'Recommendations'" [medias]="recommendations" [genres]="genres"></app-media-inset-info>
     }
   </div>
 </section>

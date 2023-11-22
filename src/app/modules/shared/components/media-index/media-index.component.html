@@ -1,6 +1,6 @@
 @if (medias) {
   <article class="mb-4">
-    <h3 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="'pages.' + title"></h3>
+    <h3 class="mb-3 ms-lg-5 text-lg-start text-center">{{title}}</h3>
     <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="3.4" [numScroll]="1" [autoplayInterval]="2000" [responsiveOptions]="responsiveOptions">
       <ng-template let-media pTemplate="media">
         <a [routerLink]="['/movie', media.id]" class="mx-md-2 fx-middle justify-content-md-start">
@@ -36,8 +36,7 @@
               }}</span>
               <span
                 class="border-start ps-1 genres"
-                [translate]="'pages.' + type"
-              ></span>
+              >{{type}}</span>
             </div>
           </div>
         </a>

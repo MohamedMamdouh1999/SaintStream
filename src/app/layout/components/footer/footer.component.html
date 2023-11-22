@@ -2,33 +2,32 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 text-center">
-        <h3 translate="footer.ourAchievment"></h3>
+        <h3>Our platform is trusted by millions & features best updated movies and series all around the world.</h3>
       </div>
       <div class="col-md-6">
         <ul
           class="my-3 mt-md-0 fx-wrap justify-content-center justify-content-md-end"
         >
           <li>
-            <a routerLink="movies" translate="header.links.movies"></a>
+            <a routerLink="movies">Movies</a>
           </li>
           <li class="mx-2">/</li>
           <li>
-            <a routerLink="tv-series" translate="header.links.series"></a>
+            <a routerLink="tv-series">TV Series</a>
           </li>
           <li class="mx-2">/</li>
           <li>
             <a
               routerLink="movie-release"
-              translate="header.links.movieRelease"
-            ></a>
+            >Movie Release</a>
           </li>
           <li class="mx-2">/</li>
           <li>
-            <a routerLink="forum" translate="header.links.forum"></a>
+            <a routerLink="forum">Forum</a>
           </li>
           <li class="mx-2">/</li>
           <li>
-            <a routerLink="about" translate="header.links.about"></a>
+            <a routerLink="about">About</a>
           </li>
         </ul>
         <div class="mt-md-4 text-center">
@@ -102,47 +101,14 @@
             class="text-nowrap"
             href="https://policies.google.com/privacy?hl=en&fg=1"
             target="_blank"
-            translate="footer.privacyPolicy"
-          ></a>
+          >Privacy Policy</a>
         </li>
         <li class="mx-2">
           <a
             class="text-nowrap"
             href="https://policies.google.com/terms?hl=en&fg=1"
             target="_blank"
-            translate="footer.termService"
-          ></a>
-        </li>
-        <li>
-          @if (isRtl) {
-          <button
-            class="shadow-none border-0 bg-transparent fx-middle"
-            (click)="changeCurrentLanguage('en')"
-          >
-            <img
-              priority
-              height="30"
-              width="45"
-              ngSrc="assets/media/flags/us.jpg"
-              class="rounded-1"
-              alt="United States"
-            />
-          </button>
-          } @else {
-          <button
-            class="shadow-none border-0 bg-transparent fx-middle"
-            (click)="changeCurrentLanguage('ar')"
-          >
-            <img
-              priority
-              height="30"
-              width="45"
-              ngSrc="assets/media/flags/saudi-arabia.svg"
-              class="rounded-1"
-              alt="Saudi Arabia"
-            />
-          </button>
-          }
+          >Term of Service</a>
         </li>
       </ul>
       <span>&copy; {{ getYear() }}</span>

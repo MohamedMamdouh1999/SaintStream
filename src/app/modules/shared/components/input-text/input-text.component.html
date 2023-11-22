@@ -1,21 +1,21 @@
 <div class="form-group mb-3">
-  <label [for]="label" [translate]="'auth.forms.'+label"></label>
-  <input [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control mt-1 text-white shadow-none" [type]="type" [id]="label" [name]="label" placeholder="{{'auth.forms.' + label | translate}}"/>
+  <label [for]="label">{{label}}</label>
+  <input [ngModel]="value" (ngModelChange)="onChange($event)" (blur)="onTouched()" class="form-control mt-1 text-white shadow-none" [type]="type" [id]="label" [name]="label" placeholder="{{label}}"/>
   @if (submitted || (errors && touched)) {
     @if ((submitted || touched) && required) {
-      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.required"></p>
+      <p class="text-danger mt-1 mb-0">This field is required</p>
     }
     @if (patternFirstName) {
-      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.firstName"></p>
+      <p class="text-danger mt-1 mb-0">You must enter the first name</p>
     }
     @if (patternEmail) {
-      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.email"></p>
+      <p class="text-danger mt-1 mb-0">You must enter a valid email</p>
     }
     @if (patternPassword) {
-      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.password"></p>
+      <p class="text-danger mt-1 mb-0">You must enter a password with a length of at least 5</p>
     }
     @if (patternConfirmPassword) {
-      <p class="text-danger mt-1 mb-0" translate="auth.forms.errors.confirmPassword"></p>
+      <p class="text-danger mt-1 mb-0">Both passwords do not match</p>
     }
   }
 </div>
