@@ -3,24 +3,33 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMedias } from './../interfaces/imedias';
 import { IGenres } from '../interfaces/igenres';
+import { IMovie } from '../interfaces/imovie';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MediaService {
-  constructor(private http:HttpClient){}
+  constructor(private http: HttpClient) {}
   headers = {
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZTY2ZTJkNjhmODAyMTY2Y2YwYzE1ZDk0MjMwZDA3YSIsInN1YiI6IjY1MWIyYmIyOTNiZDY5MDExYjhlZjVkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5tZ2iJsSrapyyR4IWVUH-CYG5nDoXCmSDc9x3kdyHRM',
-    'accept': 'application/json'
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZTY2ZTJkNjhmODAyMTY2Y2YwYzE1ZDk0MjMwZDA3YSIsInN1YiI6IjY1MWIyYmIyOTNiZDY5MDExYjhlZjVkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5tZ2iJsSrapyyR4IWVUH-CYG5nDoXCmSDc9x3kdyHRM',
+    accept: 'application/json',
   };
   url: string = 'https://api.themoviedb.org/3/';
   getGenres(media: string): Observable<IGenres> {
-    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=en-US`, {headers:this.headers})
+    return this.http.get<IGenres>(
+      this.url + `genre/${media}/list?language=en-US`,
+      { headers: this.headers }
+    );
   }
-  getMedia(media: string, type: string): Observable<IMedias> {
-    return this.http.get<IMedias>(`${this.url}${media}/${type}?language=en-US`, { headers: this.headers })
+  getMedias(media: string, type: string): Observable<IMedias> {
+    return this.http.get<IMedias>(`${this.url}${media}/${type}?language=en-US`, { headers: this.headers });
+  }
+  getMedia(media: string, id: number): Observable<IMovie> {
+    return this.http.get<IMovie>(`${this.url}${media}/${id}?language=en-US`, { headers: this.headers });
   }
 }
+
 // genre    -  movie         =>   genre     movie/list
 // genre    -  tv            =>   genre     tv/list
 // ======================================================

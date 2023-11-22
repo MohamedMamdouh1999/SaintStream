@@ -1,21 +1,9 @@
 @if (medias) {
   <article class="mb-4">
-    <h3
-      class="mb-3 text-center"
-      [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'"
-      [translate]="'pages.' + title"
-    ></h3>
-    <p-carousel
-      dir="ltr"
-      [value]="medias"
-      [showIndicators]="false"
-      [numVisible]="3.4"
-      [numScroll]="1"
-      [autoplayInterval]="2000"
-      [responsiveOptions]="responsiveOptions"
-    >
+    <h3 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="'pages.' + title"></h3>
+    <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="3.4" [numScroll]="1" [autoplayInterval]="2000" [responsiveOptions]="responsiveOptions">
       <ng-template let-media pTemplate="media">
-        <a routerLink="/" class="mx-md-2 fx-middle justify-content-md-start">
+        <a [routerLink]="['/movie', media.id]" class="mx-md-2 fx-middle justify-content-md-start">
           <h2 class="mb-0 mx-1">{{ medias.indexOf(media) + 1 }}</h2>
           <img
             class="mx-2 rounded-4"

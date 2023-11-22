@@ -14,6 +14,27 @@
       "log-in": "Log In"
     }
   },
+  "pages": {
+    "watchTrailer": "Watch Trailer",
+    "upComing": "Up Coming",
+    "nowPlaying": "Now Playing",
+    "popular": "Popular",
+    "topRated": "Top Rated",
+    "onTheAir": "On The Air",
+    "airingToday": "Airing Today",
+    "actors": "Actors",
+    "actresses": "Actresses",
+    "movie": "Movie",
+    "series": "Series",
+    "storyLine": "Story Line",
+    "similarMovies": "Similar Movies",
+    "recommendations": "Recommendations"
+  },
+  "footer": {
+    "ourAchievment": "Our platform is trusted by millions & features best updated movies and series all around the world.",
+    "privacyPolicy": "Privacy policy",
+    "termService": "Term of service"
+  },
   "auth": {
     "logIn": {
       "titleDescription": "Login to your account",
@@ -40,23 +61,5 @@
         "confirmPassword": "Both passwords do not match"
       }
     }
-  },
-  "pages": {
-    "watchTrailer": "Watch Trailer",
-    "upComing": "Up Coming",
-    "nowPlaying": "Now Playing",
-    "popular": "Popular",
-    "topRated": "Top Rated",
-    "onTheAir": "On The Air",
-    "airingToday": "Airing Today",
-    "actors": "Actors",
-    "actresses": "Actresses",
-    "movie": "Movie",
-    "series": "Series"
-  },
-  "footer": {
-    "ourAchievment": "Our platform is trusted by millions & features best updated movies and series all around the world.",
-    "privacyPolicy": "Privacy policy",
-    "termService": "Term of service"
   }
 }

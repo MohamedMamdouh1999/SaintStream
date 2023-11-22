@@ -14,6 +14,27 @@
       "log-in": "تسجيل الدخول"
     }
   },
+  "pages": {
+    "watchTrailer": "مشاهدة الأعلان",
+    "upComing": "القادم",
+    "nowPlaying": "يعرض الأن",
+    "popular": "الأشهر",
+    "topRated": "الأعلى تقييمًا",
+    "onTheAir": "على الهواء",
+    "airingToday": "يبث اليوم",
+    "actors": "الممثلين",
+    "actresses": "الممثلات",
+    "movie": "فلم",
+    "series": "مسلسل",
+    "storyLine": "القصة",
+    "similarMovies": "أفلام مماثلة",
+    "recommendations": "توصيات"
+  },
+  "footer": {
+    "ourAchievment": "تحظى منصتنا بثقة الملايين وتتميز بأفضل الأفلام والمسلسلات المحدثة في جميع أنحاء العالم.",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termService": "بنود الخدمة"
+  },
   "auth": {
     "logIn": {
       "titleDescription": "سجل دخول لحسابك",
@@ -40,23 +61,5 @@
         "confirmPassword": "كلا كلمتي المرور غير متطابقتين"
       }
     }
-  },
-  "pages": {
-    "watchTrailer": "مشاهدة الأعلان",
-    "upComing": "القادم",
-    "nowPlaying": "يعرض الأن",
-    "popular": "الأشهر",
-    "topRated": "الأعلى تقييمًا",
-    "onTheAir": "على الهواء",
-    "airingToday": "يبث اليوم",
-    "actors": "الممثلين",
-    "actresses": "الممثلات",
-    "movie": "فلم",
-    "series": "مسلسل"
-  },
-  "footer": {
-    "ourAchievment": "تحظى منصتنا بثقة الملايين وتتميز بأفضل الأفلام والمسلسلات المحدثة في جميع أنحاء العالم.",
-    "privacyPolicy": "سياسة الخصوصية",
-    "termService": "بنود الخدمة"
   }
 }

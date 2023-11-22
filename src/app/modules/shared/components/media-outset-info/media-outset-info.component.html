@@ -17,7 +17,7 @@
       <div class="mx-1">
         <a
           [attr.aria-label]="media.title || media.name"
-          routerLink="/"
+          [routerLink]="['/movie', media.id]"
           class="rounded-4 d-block"
           [ngStyle]="{
             'background-image':

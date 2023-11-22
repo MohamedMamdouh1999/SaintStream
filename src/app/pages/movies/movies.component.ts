@@ -8,18 +8,18 @@ import { IGenre } from '../../modules/shared/interfaces/igenre';
   selector: 'app-movies',
   standalone: true,
   imports: [SharedModule],
-templateUrl: './movies.component.html',
-  styleUrl: './movies.component.scss'
+  templateUrl: './movies.component.html',
+  styleUrl: './movies.component.scss',
 })
 export class MoviesComponent {
-  constructor(private http: MediaService){
-    this.getGenres()
-    this.getMedia('trending', 'movie/day')
-    this.getMedia('movie', 'upcoming')
-    this.getMedia('movie', 'now_playing')
-    this.getMedia('movie', 'popular')
-    this.getMedia('movie', 'top_rated')
-    this.getMedia('trending', 'person/day')
+  constructor(private http: MediaService) {
+    this.getGenres();
+    this.getMedias('trending', 'movie/day');
+    this.getMedias('movie', 'upcoming');
+    this.getMedias('movie', 'now_playing');
+    this.getMedias('movie', 'popular');
+    this.getMedias('movie', 'top_rated');
+    this.getMedias('trending', 'person/day');
   }
   genres!: IGenre[];
   trending!: IMedia[];
@@ -31,22 +31,41 @@ export class MoviesComponent {
   actresses!: IMedia[];
   getGenres(): void {
     this.http.getGenres('movie').subscribe({
-      next: (data) => this.genres = data.genres
+      next: (data) => (this.genres = data.genres),
     });
   }
-  getMedia(media: string, type: string): void {
-    this.http.getMedia(media, type).subscribe({
-      next: data => {
-        if(type === 'movie/day') this.trending = data.results.filter(media => media.backdrop_path !== null)
-        else if(type === 'upcoming') this.upComing = data.results.filter(media => media.poster_path !== null)
-        else if(type === 'now_playing') this.nowPlaying = data.results.filter(media => media.poster_path !== null)
-        else if(type === 'popular') this.popular = data.results.filter(media => media.poster_path !== null)
-        else if(type === 'top_rated') this.topRated = data.results.filter(media => media.poster_path !== null)
-        else if(type === 'person/day'){
-          this.actors = data.results.filter(media => media.profile_path !== null && media.gender === 2)
-          this.actresses = data.results.filter(media => media.profile_path !== null && media.gender === 1)
+  getMedias(media: string, type: string): void {
+    this.http.getMedias(media, type).subscribe({
+      next: (data) => {
+        if (type === 'movie/day')
+          this.trending = data.results.filter(
+            (media) => media.backdrop_path !== null
+          );
+        else if (type === 'upcoming')
+          this.upComing = data.results.filter(
+            (media) => media.poster_path !== null
+          );
+        else if (type === 'now_playing')
+          this.nowPlaying = data.results.filter(
+            (media) => media.poster_path !== null
+          );
+        else if (type === 'popular')
+          this.popular = data.results.filter(
+            (media) => media.poster_path !== null
+          );
+        else if (type === 'top_rated')
+          this.topRated = data.results.filter(
+            (media) => media.poster_path !== null
+          );
+        else if (type === 'person/day') {
+          this.actors = data.results.filter(
+            (media) => media.profile_path !== null && media.gender === 2
+          );
+          this.actresses = data.results.filter(
+            (media) => media.profile_path !== null && media.gender === 1
+          );
         }
-      }
-    })
+      },
+    });
   }
 }
