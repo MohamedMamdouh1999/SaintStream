@@ -4,11 +4,11 @@ import { IMedia } from '../../interfaces/imedia';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
 
 @Component({
-  selector: 'app-media-popular',
-  templateUrl: './media-popular.component.html',
-  styleUrl: './media-popular.component.scss'
+  selector: 'app-media-index',
+  templateUrl: './media-index.component.html',
+  styleUrl: './media-index.component.scss'
 })
-export class MediaPopularComponent {
+export class MediaIndexComponent {
   constructor(private translate: TranslateService){
     translate.onLangChange.subscribe({
       next: () => this.isRtl = this.translate.currentLang === "ar" ? true : false
