@@ -7,7 +7,7 @@ interface IDates {
 
 export interface IMedias {
   page: number,
-  dates: IDates,
+  dates?: IDates,
   results: IMedia[],
   total_pages: number,
   total_results: number

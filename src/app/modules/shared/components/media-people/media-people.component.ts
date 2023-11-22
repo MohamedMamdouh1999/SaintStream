@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IResponsiveOption } from '../../interfaces/iresponsive-option';
-import { IPerson } from '../../interfaces/iperson';
 import { TranslateService } from '@ngx-translate/core';
+import { IMedia } from '../../interfaces/imedia';
 
 @Component({
   selector: 'app-media-people',
@@ -22,5 +22,5 @@ export class MediaPeopleComponent {
   isRtl: boolean = false;
   responsiveOptions: IResponsiveOption[];
   @Input({required: true}) title!: string;
-  @Input({required: true}) people!: IPerson[];
+  @Input({required: true}) people!: IMedia[];
 }

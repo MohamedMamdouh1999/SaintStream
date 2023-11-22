@@ -1,13 +1,31 @@
 @if (people) {
-  <article class="mb-4">
-    <h3 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="'pages.'+title"></h3>
-    <p-carousel dir="ltr" [value]="people" [showIndicators]="false" [numVisible]="4.5" [numScroll]="2" [responsiveOptions]="responsiveOptions">
-      <ng-template let-person pTemplate="person">
-        <a routerLink="/home" class="mx-2 d-inline-block">
-          <img class="rounded-4" priority width="185" height="278" [ngSrc]="'https://image.tmdb.org/t/p/h632'+person.profile_path" [alt]="person.name">
-          <p class="mb-0 mt-1">{{person.name}}</p>
-        </a>
-      </ng-template>
-    </p-carousel>
-  </article>
+<article class="mb-4">
+  <h3
+    class="mb-3 text-center"
+    [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'"
+    [translate]="'pages.' + title"
+  ></h3>
+  <p-carousel
+    dir="ltr"
+    [value]="people"
+    [showIndicators]="false"
+    [numVisible]="4.5"
+    [numScroll]="2"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-person pTemplate="person">
+      <a routerLink="/" class="mx-2 d-inline-block">
+        <img
+          class="rounded-4"
+          priority
+          width="185"
+          height="278"
+          [ngSrc]="'https://image.tmdb.org/t/p/h632' + person.profile_path"
+          [alt]="person.name"
+        />
+        <p class="mb-0 mt-1">{{ person.name }}</p>
+      </a>
+    </ng-template>
+  </p-carousel>
+</article>
 }

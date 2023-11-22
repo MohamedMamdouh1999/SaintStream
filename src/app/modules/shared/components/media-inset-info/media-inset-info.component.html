@@ -1,9 +1,9 @@
 @if (medias) {
   <article class="mb-4">
-    <h2 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="title"></h2>
+    <h2 class="mb-3 text-center" [ngClass]="isRtl ? 'me-lg-5 text-lg-end' : 'ms-lg-5 text-lg-start'" [translate]="'pages.'+title"></h2>
     <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="4.4" [numScroll]="2" [responsiveOptions]="responsiveOptions">
       <ng-template let-media pTemplate="media">
-        <a routerLink="/home" class="d-inline-block position-relative rounded-4 overflow-hidden mx-2">
+        <a routerLink="/" class="d-inline-block position-relative rounded-4 overflow-hidden mx-2">
           <img priority width="223" height="334" [ngSrc]="'https://image.tmdb.org/t/p/w780'+media.poster_path" [alt]="media.title || media.name"/>
           <div class="text-start position-absolute bottom-0 start-0 end-0 py-2 ps-3 pe-2">
             <p class="fw-bold mb-1">{{media.title || media.name}}</p>

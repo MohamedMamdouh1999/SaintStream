@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMedias } from './../interfaces/imedias';
 import { IGenres } from '../interfaces/igenres';
-import { IPeople } from '../interfaces/ipeople';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +14,27 @@ export class MediaService {
     'accept': 'application/json'
   };
   url: string = 'https://api.themoviedb.org/3/';
-
   getGenres(media: string): Observable<IGenres> {
-    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=en`, {headers:this.headers})
+    return this.http.get<IGenres>(this.url + `genre/${media}/list?language=en-US`, {headers:this.headers})
   }
-  getMedia(media: string, type: string, page: number = 1): Observable<IMedias> {
-    return this.http.get<IMedias>(this.url + `${media}/${type}?language=en-US&page=${page}`, {headers: this.headers})
-  }
-  getPeople(): Observable<IPeople> {
-    return this.http.get<IPeople>(this.url + `trending/person/day?language=en-US`, {headers:this.headers})
+  getMedia(media: string, type: string): Observable<IMedias> {
+    return this.http.get<IMedias>(`${this.url}${media}/${type}?language=en-US`, { headers: this.headers })
   }
 }
+// genre    -  movie         =>   genre     movie/list
+// genre    -  tv            =>   genre     tv/list
+// ======================================================
+// trending -  movie         =>   trending  movie/day
+// trending -  people        =>   trending  person/day
+// trending -  tv            =>   trending  tv/day
+// ======================================================
+// movie    -  upcoming      =>   movie     upcoming
+// movie    -  now playing   =>   movie     now_playing
+// movie    -  popular       =>   movie     popular
+// movie    -  top rated     =>   movie     top_rated
+// ======================================================
+// tv       -  on the air    =>   tv        on_the_air
+// tv       -  airing today  =>   tv        airing_today
+// tv       -  popular       =>   tv        popular
+// tv       -  top rated     =>   tv        top_rated
+// ======================================================

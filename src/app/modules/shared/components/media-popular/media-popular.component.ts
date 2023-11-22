@@ -22,5 +22,6 @@ export class MediaPopularComponent {
   isRtl: boolean = false;
   responsiveOptions: IResponsiveOption[];
   @Input({required: true}) type!: string;
+  @Input({required: true}) title!: string;
   @Input({required: true}) medias!: IMedia[];
 }

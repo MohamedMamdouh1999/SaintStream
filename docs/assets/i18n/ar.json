@@ -2,6 +2,7 @@
   "header": {
     "links": {
       "home": "الصفحة الرئيسية",
+      "movies": "أفلام",
       "series": "مسلسلات تلفزيونية",
       "movieRelease": "الأفلام القادمة",
       "forum": "المنتدى",
@@ -42,14 +43,16 @@
   },
   "pages": {
     "watchTrailer": "مشاهدة الأعلان",
-    "airingToday": "يبث اليوم",
+    "upComing": "القادم",
     "nowPlaying": "يعرض الأن",
-    "popularWeek": "الأشهر خلال الأسبوع",
+    "popular": "الأشهر",
     "topRated": "الأعلى تقييمًا",
-    "movie": "فلم",
-    "series": "مسلسل",
+    "onTheAir": "على الهواء",
+    "airingToday": "يبث اليوم",
     "actors": "الممثلين",
-    "actresses": "الممثلات"
+    "actresses": "الممثلات",
+    "movie": "فلم",
+    "series": "مسلسل"
   },
   "footer": {
     "ourAchievment": "تحظى منصتنا بثقة الملايين وتتميز بأفضل الأفلام والمسلسلات المحدثة في جميع أنحاء العالم.",

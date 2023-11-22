@@ -2,6 +2,7 @@
   "header": {
     "links": {
       "home": "Home",
+      "movies": "Movies",
       "series": "TV Series",
       "movieRelease": "Movie Release",
       "forum": "Forum",
@@ -42,14 +43,16 @@
   },
   "pages": {
     "watchTrailer": "Watch Trailer",
-    "airingToday": "Airing Today",
+    "upComing": "Up Coming",
     "nowPlaying": "Now Playing",
-    "popularWeek": "Popular of the week",
+    "popular": "Popular",
     "topRated": "Top Rated",
-    "movie": "Movie",
-    "series": "Series",
+    "onTheAir": "On The Air",
+    "airingToday": "Airing Today",
     "actors": "Actors",
-    "actresses": "Actresses"
+    "actresses": "Actresses",
+    "movie": "Movie",
+    "series": "Series"
   },
   "footer": {
     "ourAchievment": "Our platform is trusted by millions & features best updated movies and series all around the world.",

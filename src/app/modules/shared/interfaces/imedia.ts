@@ -4,18 +4,22 @@ export interface IMedia {
   title: string,
   video: boolean,
   adult: boolean,
+  gender: number,
   overview: string,
   media_type: string,
   vote_count: number,
   popularity: number,
   poster_path: string,
+  known_for: IMedia[],
   genre_ids: number[],
   vote_average: number,
   release_date: string,
+  profile_path: string,
   backdrop_path: string,
   original_name: string,
   first_air_date: string,
   original_title: string,
   origin_country: string[],
-  original_language: string
+  original_language: string,
+  known_for_department: string
 }
