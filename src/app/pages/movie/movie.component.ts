@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MediaService } from '../../modules/shared/services/media.service';
 import { ActivatedRoute } from '@angular/router';
-import { IMovie } from '../../modules/shared/interfaces/imovie';
+import { IMovie, ProductionCompanies } from '../../modules/shared/interfaces/imovie';
 import { IMedia } from '../../modules/shared/interfaces/imedia';
 import { SharedModule } from '../../modules/shared/shared.module';
 import { IGenre } from '../../modules/shared/interfaces/igenre';
@@ -23,6 +23,7 @@ export class MovieComponent {
     })
   }
   movie: IMovie = {} as IMovie;
+  productionCompanies: ProductionCompanies[] = [];
   genres!: IGenre[];
   similar: IMedia[] = [];
   recommendations: IMedia[] = [];
@@ -35,7 +36,7 @@ export class MovieComponent {
     this.http.getMedia('movie', id).subscribe({
       next: data => {
         this.movie = data
-        console.log(data)
+        this.productionCompanies = data.production_companies.filter(company => company.logo_path !== null)
       }
     });
   }
@@ -43,14 +44,9 @@ export class MovieComponent {
     this.http.getMedias('movie', `${id}/${type}`).subscribe({
       next: data => {
         if(type === 'similar')
-          this.similar = data.results.filter(
-          (media) => media.poster_path !== null
-        );
-        else if(type === 'recommendations'){
-          this.recommendations = data.results.filter(
-          (media) => media.poster_path !== null);
-            console.log(this.recommendations)
-        }
+          this.similar = data.results.filter((media) => media.poster_path !== null);
+        else if(type === 'recommendations')
+          this.recommendations = data.results.filter((media) => media.poster_path !== null);
       }
     })
   }

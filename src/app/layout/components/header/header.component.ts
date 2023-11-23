@@ -17,6 +17,6 @@ export class HeaderComponent {
   }
   @HostListener('window:scroll', [])
   onScroll(): void {
-    (window.scrollY > (window.innerHeight / 5)) ? this.isBottom = true : this.isBottom = false
+    (window.scrollY > 65) ? this.isBottom = true : this.isBottom = false
   }
 }

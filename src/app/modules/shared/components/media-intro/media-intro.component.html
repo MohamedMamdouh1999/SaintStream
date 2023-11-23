@@ -1,6 +1,6 @@
 @if (medias) {
   <section class="mb-5">
-    <p-carousel dir="ltr" [value]="medias" [showNavigators]="false" [showIndicators]="true" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" [autoplayInterval]="3000">
+    <p-carousel [value]="medias" [showNavigators]="false" [showIndicators]="true" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" [autoplayInterval]="3000">
       <ng-template let-media pTemplate="media">
         <div class="poster-layer" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/original'+media.backdrop_path+')'}">
           <div class="overlay-layer fx">

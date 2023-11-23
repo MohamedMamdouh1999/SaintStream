@@ -7,7 +7,7 @@ interface ProductionCountries {
   name: string,
   iso_3166_1: string
 }
-interface ProductionCompanies {
+export interface ProductionCompanies {
   id: number,
   name: string,
   logo_path: string,

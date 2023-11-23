@@ -1,21 +1,11 @@
 
 --------------------------------------------------------------------------------
-Package: @ngx-translate/http-loader
-License: "SEE LICENSE IN LICENSE"
-
-
---------------------------------------------------------------------------------
-Package: @ngx-translate/core
-License: "SEE LICENSE IN LICENSE"
-
-
---------------------------------------------------------------------------------
-Package: primeng
+Package: @angular/forms
 License: "MIT"
 
 
 --------------------------------------------------------------------------------
-Package: @angular/forms
+Package: primeng
 License: "MIT"
 
 

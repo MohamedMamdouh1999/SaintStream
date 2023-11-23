@@ -1,7 +1,7 @@
 @if (medias) {
   <article class="mb-4">
     <h3 class="mb-3 ms-lg-5 text-lg-start text-center">{{title}}</h3>
-    <p-carousel dir="ltr" [value]="medias" [showIndicators]="false" [numVisible]="3.4" [numScroll]="1" [autoplayInterval]="2000" [responsiveOptions]="responsiveOptions">
+    <p-carousel [value]="medias" [showIndicators]="false" [numVisible]="3.4" [numScroll]="1" [autoplayInterval]="2000" [responsiveOptions]="responsiveOptions">
       <ng-template let-media pTemplate="media">
         <a [routerLink]="['/movie', media.id]" class="mx-md-2 fx-middle justify-content-md-start">
           <h2 class="mb-0 mx-1">{{ medias.indexOf(media) + 1 }}</h2>
